@@ -9,10 +9,7 @@ request.send();
 request.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var Jsonobj = JSON.parse(this.responseText);
-        var exp = Jsonobj.Movies[0].title;
-        console.log(exp);
         setdescription(Jsonobj);
-
         (function(parseddata) {
             var titlearr = document.getElementsByClassName("title");
             var titles = [];
