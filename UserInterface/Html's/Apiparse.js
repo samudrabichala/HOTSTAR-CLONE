@@ -10,6 +10,7 @@ request.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var Jsonobj = JSON.parse(this.responseText);
         setdescription(Jsonobj);
+        /*IIFE for get and set titles*/
         (function(parseddata) {
             var titlearr = document.getElementsByClassName("title");
             var titles = [];
@@ -17,11 +18,9 @@ request.onreadystatechange = function() {
             for (let i = 0; i < totallength; i++) {
                 titles[i] = parseddata.Movies[i].title;
                 titlearr[i].innerHTML = titles[i];
-
             }
         })(Jsonobj);
     }
-
 }
 
 function setdescription(parseddata) {
