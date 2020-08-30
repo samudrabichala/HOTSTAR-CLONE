@@ -2,7 +2,7 @@ function openvideo() {
     window.open('file:///home/dinakar/Desktop/HTMLS/HOTSTARCLONE/gotintro.html');
 }
 
-var url = 'https://dinakarj78.github.io/cloneapi.github.io/Data.json';
+url = 'https://dinakarj78.github.io/cloneapi.github.io/Data.json';
 var request = new XMLHttpRequest();
 request.open('GET', url, true);
 request.send();
@@ -47,11 +47,13 @@ function alertuser() {
     alert("ADDED TO WATCH LIST");
 }
 
-var titlearr = document.getElementsByClassName("title");
-var genrearr = document.getElementsByClassName("genre");
-var yeararr = document.getElementsByClassName("year");
-var langarr = document.getElementsByClassName("language");
+titlearr = document.getElementsByClassName("title");
+genrearr = document.getElementsByClassName("genre");
+yeararr = document.getElementsByClassName("year");
+langarr = document.getElementsByClassName("language");
 console.log(titlearr);
+
+
 
 function thumbnail1(parseddata) {
     var title, genre, year, language;
@@ -171,6 +173,7 @@ function thumbnail9(parseddata) {
     yeararr[9].innerText = year;
     langarr[9].innerText = language;
     console.log(titlearr[9]);
+
 }
 
 function thumbnail10(parseddata) {
