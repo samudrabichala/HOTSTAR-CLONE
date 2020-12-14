@@ -17,11 +17,43 @@ request.onreadystatechange = function() {
             for (let i = 0; i < totallength; i++) {
                 titles[i] = parseddata.Movies[i].title;
                 titlearr[i].innerHTML = titles[i];
-
             }
         })(Jsonobj);
     }
+}
+var index = 0;
 
+function next() {
+    var iels;
+    iels = document.querySelectorAll("#section2");
+    /*index = index + increase;
+    index = Math.min(Math.max(index, 0), iels.length - 1);
+    console.log(index);
+    iels[index].scrollIntoView({
+        block: 'nearest',
+        behaviour: 'auto'
+    });*/
+    console.log(iels);
+    iels.scrollIntoView({
+        block: 'nearest',
+        behaviour: 'auto'
+    });
+}
+
+function previous() {
+    var iels = [];
+    iels = document.querySelectorAll("#section2");
+    /*index = index + increase;
+    index = Math.min(Math.max(index, 0), iels.length - 1);
+    console.log(index);
+    iels[index].scrollIntoView({
+        block: 'nearest',
+        behaviour: 'auto'
+    });*/
+    iels[0].scrollIntoView({
+        block: 'nearest',
+        behaviour: 'auto'
+    });
 }
 
 function setdescription(parseddata) {

@@ -1,7 +1,11 @@
+:root {
+    --backgroundcolor: #0d121b;
+}
+
 body {
     color: black;
-    background-color: #0d121b;
-    overflow: auto;
+    background-color: var(--backgroundcolor);
+    overflow-x: auto;
     width: 1300px;
 }
 
@@ -15,33 +19,36 @@ body {
     display: flex;
     align-items: flex-start;
     width: 100%;
-    color: whitesmoke;
+    height: fit-content;
+    color: white;
     line-height: 50px;
-    background-color: #0d121b;
+    background-color: var(--backgroundcolor);
+    box-shadow: 0px 3px var(--backgroundcolor);
 }
 
-.nav span {
+.nav li {
+    display: inline;
     opacity: 0.5;
     position: relative;
     text-align: center;
     margin-left: 50px;
     font-size: 17px;
-    position: relative;
 }
 
 input[type=text] {
     position: absolute;
     right: 100px;
     border: none;
-    border-bottom: 3px solid red;
+    border-bottom: 1px solid red;
     margin-top: 15px;
 }
 
-.nav span:hover {
+.nav li:hover {
     background-color: red;
     border-radius: 5px;
     width: 100px;
     color: black;
+    cursor: pointer;
 }
 
 
@@ -52,21 +59,48 @@ input[type=text] {
 
 .bannercontainer {
     width: 1200px;
-    height: min-content;
-    margin-top: 100px;
-    margin-left: 30px;
-    margin-right: 30px;
     background-color: 2D130D;
     color: white;
-    overflow: auto;
-    border-radius: 10px;
+    margin-top: 0px;
     position: relative;
+    float: left;
+    animation: 30s slidy infinite;
+    margin-left: 20px;
+}
+
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+    25% {
+        left: 0%;
+    }
+    55% {
+        left: -25%;
+    }
+    75% {
+        left: -50%;
+    }
+    100% {
+        left: -75%;
+    }
 }
 
 .poster {
-    float: right;
+    float: left;
+    margin-right: 40px;
     width: 700px;
-    height: 400px;
+    height: 60%;
+}
+
+.container {
+    width: max-content;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    clear: both;
 }
 
 .onhover {
@@ -85,4 +119,15 @@ input[type=text] {
     visibility: visible;
     opacity: 0.5;
     z-index: 2;
+}
+
+.thumbnailscontainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+    height: auto;
+    flex-direction: row;
+    flex-shrink: 0;
+    overflow: hidden;
 }

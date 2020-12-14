@@ -1,18 +1,11 @@
 /*common styling for  all section containers*/
 
-.main {
-    margin-left: 20px;
+:root {
+    --backggroundcolor: #0d121b;
 }
 
-.thumbnailscontainer {
-    display: flex;
-    width: min-content;
-    margin-left: 10px;
-    height: auto;
-    flex-direction: row;
-    flex-shrink: 0;
-    margin-left: 0px;
-    scroll-behavior: smooth;
+.main {
+    margin-left: 20px;
 }
 
 .sectionnames {
@@ -27,15 +20,10 @@
     width: 260px;
     height: 145px;
     margin: 15px;
+    flex-shrink: 0;
     border-radius: 10px;
     position: relative;
-    flex-shrink: 1;
-    background-color: #0d121b;
-    /* fallback for old browsers *
-        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-        /* Chrome 10-25, Safari 5.1-6 *
-        background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: var(--backggroundcolor);
     position: relative;
 }
 
@@ -44,21 +32,11 @@
     position: relative;
     margin: 18px;
     height: 220px;
+    flex-shrink: 0;
     width: 138px;
     border-radius: 5px;
-    background-color: #0d121b;
-    /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: var(--backggroundcolor);
 }
-
-
-/*todo:add hovering on thumbnails*/
-
-
-/*news*/
 
 .backgroundimg {
     background-size: 100% 100%;
@@ -84,7 +62,6 @@
     font-weight: 400;
     border-radius: 10px;
     background-image: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133, #192133);
-    /* transition: 2s ease;*/
     margin-left: 0px;
     color: white;
 }
@@ -104,32 +81,38 @@
 .title {
     position: absolute;
     top: 0px;
-    font-weight: bold;
     font-size: 15px;
     opacity: 1.0;
     width: 100%;
     height: auto;
     overflow-wrap: break-word;
     margin-top: 8px;
+    font-family: 'David Libre', serif;
 }
 
 .description .genre {
     margin-top: 16px;
     margin-left: 2px;
     font-size: 10px;
-    font-family: "Roboto";
+    font-family: 'David Libre', serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Peddana', serif;
 }
 
 .description .year {
     margin-top: 16px;
-    font-family: "Roboto";
     margin-left: 2px;
     font-size: 10px;
+    font-family: 'David Libre', serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Peddana', serif;
 }
 
 .description .language {
     margin-top: 16px;
-    font-family: "Roboto";
+    font-family: 'David Libre', serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Peddana', serif;
     margin-left: 2px;
     font-size: 10px;
 }
@@ -145,7 +128,7 @@
     width: auto;
     height: 20px;
     color: whitesmoke;
-    background-color: #0d121b;
+    background-color: var(--backggroundcolor);
     font-weight: bold;
     opacity: 0.3;
     font-size: 10px;
@@ -158,7 +141,7 @@
     border-style: none;
     width: auto;
     height: 20px;
-    background-color: #0d121b;
+    background-color: var(--backggroundcolor);
     color: whitesmoke;
     font-weight: bold;
     font-size: 10px;
@@ -197,40 +180,37 @@
     margin-left: 0px;
 }
 
-
-/*.onhover1 p {
-    display: inline;
-    
-}*/
-
-
-/* .leftarrow {
-    position: absolute;
+.leftarrow {
     color: #fff;
     text-decoration: none;
     font-size: 6em;
     background: rgb(0, 0, 0);
     width: 80px;
+    position: absolute;
+    left: 0px;
     text-align: center;
     height: 145px;
     z-index: 1;
+    border-style: none;
     background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    cursor: pointer;
 }
+
 .rightarrow {
     position: absolute;
     color: #fff;
     text-decoration: none;
     font-size: 6em;
-    left: 290px;
-    top: 0px;
+    right: 0px;
+    border-style: none;
     background: rgb(0, 0, 0);
     width: 80px;
     text-align: center;
     height: 145px;
     z-index: 1;
     background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    cursor: pointer;
 }
-*/
 
 .thumbnaildesign1:hover .backgroundimg {
     margin: 30px;
@@ -244,7 +224,7 @@
 .thumbnaildesign2:hover .backgroundimg {
     margin-right: 20px;
     margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
     transform: scaleY(3.4);
     transform: scaleX(1.8);
     border-radius: 5px;
